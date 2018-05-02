@@ -1,0 +1,13 @@
+# ignore all logs
+*.log
+
+# ignore node modules
+/node_modules# ignore all logs
+*.log
+
+# ignore node modules
+/node_modules# ignore all logs
+*.log
+
+# ignore node modules
+/node_modules
