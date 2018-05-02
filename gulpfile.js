@@ -90,3 +90,26 @@ gulp.task('css', ['images'], function() {
     .pipe(gulp.dest(folder.build + 'css/'));
 
 });
+
+// run all tasks
+gulp.task('run', ['html', 'css', 'js']);
+
+// watch for changes
+gulp.task('watch', function() {
+  
+  // image changes
+  gulp.watch(folder.src + 'images/**/*', ['images']);
+
+  // html changes
+  gulp.watch(folder.src + 'html/**/*', ['html']);
+
+  // javascript changes
+  gulp.watch(folder.src + 'js/**/*', ['js']);
+
+  // css changes
+  gulp.watch(folder.src + 'scss/**/*', ['css']);
+
+});
+
+// default task
+gulp.task('default', ['run', 'watch']);
